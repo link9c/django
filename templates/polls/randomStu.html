@@ -1,0 +1,52 @@
+{% extends "polls/index.html" %}
+{% block js %}
+    {% load static %}
+    <script type="text/javascript" src="{% static 'polls/randomStu.js' %}"></script>
+{% endblock %}
+{% block content %}
+
+    <div class="container">
+        <!--<button type="button" class="btn btn-success">欧皇</button>-->
+
+        <div class="panel panel-info">
+            <!-- Default panel contents -->
+            <div class="panel-heading">
+                <a class="btn btn-success">模式1</a>
+                <a class="btn btn-warning">模式2</a>
+                欧皇卡池
+            </div>
+            <div class="panel-body">
+                <p>
+                    <span class="text-danger" id="result"></span>
+                </p>
+            </div>
+
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>概率</th>
+                </tr>
+                {% if student_name %}
+                    {% for student in student_name %}
+                        <tr>
+                            <td>{{ student.id }}</td>
+                            <td>{{ student.name }}</td>
+                            <td>0</td>
+
+                        </tr>
+                    {% endfor %}
+                {% else %}
+                    <p>没有卡</p>
+                {% endif %}
+
+
+            </table>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

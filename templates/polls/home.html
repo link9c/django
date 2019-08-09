@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <script type="text/javascript" src="{% static 'polls/js/jquery-3.1.1.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/index.css' %}"/>
+    <link rel="shortcut icon" href="{% static "polls/favicon.ico" %}" />
+
+
+    <meta charset="UTF-8">
+    <title>what's wrong? ahaaaa~~~</title>
+
+</head>
+<body>
+<nav class="header-boot navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'polls:index' %}" style="padding: 2px 15px;">
+                <img alt="Brand" class="img-circle" src="{% static 'polls/images/饼干.png' %}"
+                     style="height: 46px;width: 46px;border-radius: 23px;">
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active">
+                    <a href="#">Link</a>
+                </li>
+
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">{{ ip }}</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Login <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">profile</a>
+                        </li>
+                        <li>
+                            <a href="#">message</a>
+                        </li>
+                        <li>
+                            <a href="#">account</a>
+                        </li>
+                        <li role="separator" class="divider"></li>
+                        <li>
+                            <a href="#">logout</a>
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid" id="carousel-container">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active left">
+                <img data-src="" alt="First slide [1140x500]" src="{% static 'polls/images/banner.png' %}">
+            </div>
+            <div class="item next left">
+                <img data-src="" alt="Second slide [1140x500]" src="{% static 'polls/images/banner.png' %}">
+            </div>
+            <div class="item">
+                <img data-src="" alt="Third slide [1140x500]" src="{% static 'polls/images/banner.png' %}">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" id="navbar-textbar">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                <ul class="nav navbar-nav">
+                    <li class="">
+                        <a href="{% url 'polls:index' %}">Home</a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'polls:question' %}">Poll</a>
+                    </li>
+                    <li class="">
+                        <a href="{% url 'polls:randomStu' %}">RandomSelect</a>
+                    </li>
+                    <li class="">
+                        <a href="#">Other</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</div>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+
+        <h1>Hello, world!</h1>
+        <p>...</p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

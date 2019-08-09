@@ -1,0 +1,21 @@
+{% extends "polls/index.html" %}
+
+{% block content %}
+    <div id="question" class="container-fluid">
+        {% if latest_question_list %}
+            {% load static %}
+            <img src="{% static "polls/images/01.png" %}" alt="">
+            <ul>
+                {% for question in latest_question_list %}
+
+                    {#        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>#}
+                    {#        url 'polls:detail' 连接到polls.urls的name = datail的url#}
+                    <li class="question"><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p id="no_question">No polls are available.</p>
+        {% endif %}
+    </div>
+{% endblock %}

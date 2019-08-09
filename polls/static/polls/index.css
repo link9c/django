@@ -1,0 +1,41 @@
+
+.header-boot {
+    margin-bottom: 0;
+}
+
+.carousel-indicators {
+    bottom: -10px;
+}
+
+
+#navbar-textbar .navbar {
+    min-height: 46px;
+    /*height: 46px;*/
+}
+
+#navbar-textbar .navbar-nav > li:hover > a {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+#bs-example-navbar-collapse-2 .navbar-nav a {
+    height: 46px;
+    padding-top: 13px;
+}
+
+.panel-info p {
+    margin: 0;
+    /*cursor: pointer;*/
+}
+.panel-body{
+    text-align: center;
+}
+.panel-info p a {
+    cursor: pointer;
+}
+.table td{
+    width: 33%;
+}
+.table td,th{
+    text-align: center;
+}
